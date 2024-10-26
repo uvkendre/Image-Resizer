@@ -1,30 +1,40 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
+
+/* Resetting default styles and setting the font */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
+
+/* Basic styling for the body to center content */
+body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #927DFC;
+  background: #927DFC; /* Background color */
 }
-.wrapper{
+
+/* Main container styling */
+.wrapper {
   width: 450px;
   height: 288px;
   padding: 30px;
   background: #fff;
   border-radius: 9px;
-  transition: height 0.2s ease;
+  transition: height 0.2s ease; /* Smooth height transition */
 }
-.wrapper.active{
+
+/* Expanded state of the wrapper */
+.wrapper.active {
   height: 537px;
 }
-.wrapper .upload-box{
+
+/* Styling for the upload box */
+.upload-box {
   height: 225px;
   display: flex;
   cursor: pointer;
@@ -34,43 +44,63 @@ body{
   border-radius: 5px;
   border: 2px dashed #afafaf;
 }
-.wrapper.active .upload-box{
+
+/* Modify border for active upload box */
+.wrapper.active .upload-box {
   border: none;
 }
-.upload-box p{
+
+/* Styling for the placeholder text in the upload box */
+.upload-box p {
   font-size: 1.06rem;
   margin-top: 20px;
 }
-.wrapper.active .upload-box p{
+
+/* Hide placeholder text when the wrapper is active */
+.wrapper.active .upload-box p {
   display: none;
 }
-.wrapper.active .upload-box img{
+
+/* Image styling when uploaded */
+.wrapper.active .upload-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
-.wrapper .content{
+
+/* Content section below the upload box */
+.content {
   opacity: 0;
   margin-top: 28px;
-  pointer-events: none;
+  pointer-events: none; /* Disable interaction */
 }
-.wrapper.active .content{
+
+/* Show content when the wrapper is active */
+.wrapper.active .content {
   opacity: 1;
-  pointer-events: auto;
+  pointer-events: auto; /* Enable interaction */
   transition: opacity 0.5s 0.05s ease;
 }
-.content .row{
+
+/* Layout for form rows */
+.content .row {
   display: flex;
   justify-content: space-between;
 }
-.content .row .column{
-  width: calc(100% / 2 - 15px);
+
+/* Column layout for inputs */
+.content .row .column {
+  width: calc(50% - 15px);
 }
-.row .column label{
+
+/* Label styling */
+.row .column label {
   font-size: 1.06rem;
 }
-.sizes .column input{
+
+/* Input styling for text fields */
+.sizes .column input {
   width: 100%;
   height: 49px;
   outline: none;
@@ -80,24 +110,34 @@ body{
   border-radius: 4px;
   border: 1px solid #aaa;
 }
-.sizes .column input:focus{
+
+/* Focus state for inputs */
+.sizes .column input:focus {
   padding: 0 14px;
   border: 2px solid #927DFC;
 }
-.content .checkboxes{
+
+/* Checkboxes styling */
+.content .checkboxes {
   margin-top: 20px;
 }
-.checkboxes .column{
+
+/* Checkbox column layout */
+.checkboxes .column {
   display: flex;
   align-items: center;
 }
-.checkboxes .column input{
+
+/* Checkbox styling */
+.checkboxes .column input {
   width: 17px;
   height: 17px;
   margin-right: 9px;
   accent-color: #927DFC;
 }
-.content .download-btn{
+
+/* Download button styling */
+.content .download-btn {
   width: 100%;
   color: #fff;
   outline: none;
